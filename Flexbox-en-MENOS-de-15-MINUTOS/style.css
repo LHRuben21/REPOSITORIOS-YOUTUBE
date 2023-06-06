@@ -1,13 +1,121 @@
 *{
     box-sizing: border-box;
 }
-.flec-container{
+.flex-container{
     display: flex;
-    background-color: aqua;
+    background-color: burlywood;
     padding: 10px;
     border: 2px solid black;
-}
+    /*A partir de aquí empieza a agregar código y comentar
+    Cada línea de codigo la usaré y luego comentaré para
+    entender los cambios y funciones:
+   
+    flex-direction: row; // Con la propiedad row
+    lo que hacemos es ponerlo en forma de fila.
 
+    flex-direction: column; // Con esto se pone en forma
+    de columna.
+
+    flex-direction: column-reverse; ordena los valores al
+    reves en columna (block).
+    flex-direction: row-reverse; ordena los valores al
+    reves en fila (inline).
+
+    Después añade 8 items (divs) nuevos en index.html (los
+    cuales también comentare):
+    
+    flex-wrap: wrap; Cuando los items no quepan en su
+    container ✅ saltaran a las siguientes filas.
+    flex-wrap: wrap; Cuando los items no quepan en su
+    container no 🚫 saltaran a las siguientes filas.
+    flex-wrap: wrap-reverse; Hará lo mismo pero colocara
+    los items al reves. 
+
+    flex-flow: row wrap; Funciona dos flex (en este caso
+    el de row (inline) y el de wrap (saltar)).
+
+    Después Kiko borra 9 items:
+    justify-content: center; alinea los items (divs)
+    en el centro de su box-flex container.
+    justify-content: start; alinear a la izquierda / 
+    principio.
+    justify-content: end;alinear a la derecha / 
+    final.
+    justify-content: space-around;alinear equitativamente
+    al total del contenido.
+    justify-content: space-between;alinear equitativamente
+    pero más en (start   center   end) al total del contenido.
+    */
+
+    /*Después añade:
+    height: 400px; y eso hace que la altura
+    sea demasiada.
+    
+    align-items: center; pese a la altura, alinea los items al
+    centro.
+    align-items: flex-end; alinea los items abajo del box-flex
+    container.
+    align-items: stretch; Hace que los items ocupen todo el alto
+    que tienen (en este caso 400px dentro del flex-box container).
+    align-items: baseline; No le entendí mucho pero le cambia los
+    tamaños a sus items (divs) y dice que la base es la misma para
+    todos (se alinean verticalmente o algo así)
+    */
+
+    /*Después añade:
+    flex-wrap: wrap;
+    allign-content: space-between; Deja espacios entre cada columna
+    de items porque el "wrap" se parece mucho al (display box).
+    allign-content: space-around; Deja espacios entre cada columna
+    de items igual que el anterior pero mejor ajustado.
+    allign-content: stretch; intenta ocupar todo el alto que puede
+    cada item (de sus 400px máximos que le permiten el flex-box
+    container).
+    allign-content: center; lo mismo que el anterior pero lo centra,
+    solo que aquí no se porque ya no 🚫 ocupa los 400px totales.
+    allign-content: flex-start; los alinea arriba.
+    allign-content: flex-end; los alinea abajo.
+    */
+
+    /*Después se regresa a index.html y le da un color a cada item
+    y también añade un orden⤵️:
+        <div style="order: 1; background-color: red;">13</div>
+        <div style="order: 2; background-color: blue;">14</div>
+        <div style="order: 3; background-color: green;">15</div>
+        <div style="order: 4; background-color: yellow;">16</div>
+    Esto alch pa' explicarlo con palabras nel, abré ejecuta el código
+    y velo xd.
+    
+    Después en lugar de "order" cambia por "flex-gorw"
+        <div style="flex-grow: 1; background-color: red;">13</div>
+        <div style="flex-grow: 2; background-color: blue;">14</div>
+        <div style="flex-grow: 3; background-color: green;">15</div>
+        <div style="flex-grow: 4; background-color: yellow;">16</div>
+    "Esto es para saber cuanto derecho a espacio dentro del flex-box
+    container tiene cada item".
+    */
+
+    /*Aquí se avienta otro despapaye para explicar el flex-shrink:
+    Aquí añade un "flex-shrink: 0; (min 09:25)":
+        <div style="flex-shrink: 0; background-color: red;">12.8</div>
+            <div style=background-color: red;">13</div>
+            <div style=background-color: blue;">14</div>
+            <div style=background-color: green;">15</div>
+            <div style=background-color: yellow;">16</div>
+    flex-shrink: 0; Determina su tamaño pese a que se añadan más
+    elementos, los elementos nuevos se hacen más pequeños, pero aquel
+    que tiene la propiedad "flex-shrink" no 🚫.
+    
+    flex-basis: 200px;
+    <div style="flex-basis: 200px; background-color: red;">12.9</div>
+    Esto hace lo mismo que el anterior pero le determina un tamaño míbimo
+    de 200px.
+    */
+    /*POOOOR UUUUULTIIIMOOOO:
+    <div style="flex: 0 1 200px;"></div>
+    Que básicamente es (0 = grow, 1 = shrink, 200px = basis), las 3    
+    */
+}
 .flex-container div{
     background-color: gainsboro;
     width: 100px;
