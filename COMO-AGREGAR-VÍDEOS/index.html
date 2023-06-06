@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reproductor de video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mi primer reproductor de video</h1>
+    <!--Es una buena idea incluir las etiquetas alto y ancho para que la página no se mueva
+mientras carga el vídeo. La etiqueta vídeo permite colocar atributos adicionales para mostrar
+el vídeo como "autoplay" para que el vídeo se reproduzca en cuanto a la página cargue
+"controls" que hace que el navegador muestre unos controles por defecto en el vídeo y "loop"
+para que cuando se termine el vídeo vuelva a comenzar automáticamente-->
+    <video width="320" height="240" id="video1" autoplay controls loop> <!--controls--> <!--loop-->
+        <source src="movie.mp4." type="video/mp4">
+        <source src="movie.mp4." type="video/Webm">
+        <!-- su navegador no soporta la etiqueta video -->
+    </video>
+    <div>
+        <button onclick="PlayPause()">&#9658;/|| </button>
+        <button onclick="stop()">&#9726; </button>
+        <button onclick="skip(-5)">&lt;&lt; </button>
+        <button onclick="skip(5)">&gt;&gt; </button>
+    </div>
+    <script>
+        var miVideo = document.getElementbyId("video1");
+        function PlayPause(){
+            if(miVideo.paused)
+            miVideo.play();
+            else
+                miVideo.pause();
+        }
+        function stop(){
+            miVideo.pause();
+            miVideo.currentTime = 0;
+        }
+        function skip(value){
+            miVideo.currentTime += value;
+        }
+    </script>
+</body>
+</html>
