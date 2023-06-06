@@ -14,7 +14,7 @@ h1{
     content: rgb(230, 100, 55);
 }
 video{
-    size-adjust: 80px;
+    size-adjust: 40px;
     display: inline-block;
     margin:5rem,80rem,5rem,80rem;
     align-items: center;
