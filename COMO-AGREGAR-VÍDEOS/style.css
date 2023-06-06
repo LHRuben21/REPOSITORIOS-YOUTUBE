@@ -5,7 +5,9 @@ html{
     justify-items: center;
 }
 h1{
-    display: inline-block;
+    size-adjust: 80px;
+    display: block;
+    margin:5rem,80rem,5rem,80rem;
     border: rgb(230, 100, 55);
     margin: rgb(230, 100, 55);
     padding: rgb(230, 100, 55);
